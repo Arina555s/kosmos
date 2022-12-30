@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
 
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap);
-
 @charset "UTF-8";
 
 * {
@@ -95,6 +93,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  font-family: "Montserrat";
   background-color: #19161B;
   font-weight: 400;
   line-height: 1.75;
@@ -216,6 +215,7 @@ body {
 }
 
 .header__top {
+  z-index: 30;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -425,15 +425,15 @@ body {
   line-height: 0.8333333333;
 }
 
-@supports (font-size: clamp( 3.125rem , 2.922979798rem  +  1.0101010101vw , 3.75rem )) {
+@supports (font-size: clamp( 2.6875rem , 2.3440656566rem  +  1.7171717172vw , 3.75rem )) {
   .hrader__title {
-    font-size: clamp( 3.125rem , 2.922979798rem  +  1.0101010101vw , 3.75rem );
+    font-size: clamp( 2.6875rem , 2.3440656566rem  +  1.7171717172vw , 3.75rem );
   }
 }
 
-@supports not (font-size: clamp( 3.125rem , 2.922979798rem  +  1.0101010101vw , 3.75rem )) {
+@supports not (font-size: clamp( 2.6875rem , 2.3440656566rem  +  1.7171717172vw , 3.75rem )) {
   .hrader__title {
-    font-size: calc(3.125rem + 0.625 * (100vw - 20rem) / 61.875);
+    font-size: calc(2.6875rem + 1.0625 * (100vw - 20rem) / 61.875);
   }
 }
 
@@ -574,10 +574,6 @@ body {
   line-height: 17px;
 }
 
-.header__description-text + .header__description-text {
-  margin-left: 52px;
-}
-
 .no-webp .about{
   background-image: url("../img/Group13.png"); }
 
@@ -618,15 +614,15 @@ body {
   }
 }
 
-@supports (padding-top: clamp( 2.8125rem , 1.9034090909rem  +  4.5454545455vw , 5.625rem )) {
+@supports (padding-top: clamp( 4.0625rem , 3.5574494949rem  +  2.5252525253vw , 5.625rem )) {
   .title {
-    padding-top: clamp( 2.8125rem , 1.9034090909rem  +  4.5454545455vw , 5.625rem );
+    padding-top: clamp( 4.0625rem , 3.5574494949rem  +  2.5252525253vw , 5.625rem );
   }
 }
 
-@supports not (padding-top: clamp( 2.8125rem , 1.9034090909rem  +  4.5454545455vw , 5.625rem )) {
+@supports not (padding-top: clamp( 4.0625rem , 3.5574494949rem  +  2.5252525253vw , 5.625rem )) {
   .title {
-    padding-top: calc(2.8125rem + 2.8125 * (100vw - 20rem) / 61.875);
+    padding-top: calc(4.0625rem + 1.5625 * (100vw - 20rem) / 61.875);
   }
 }
 
@@ -672,6 +668,7 @@ body {
   line-height: 14px;
   text-transform: uppercase;
   color: #036cca;
+  padding-top: 10px;
 }
 
 @supports (padding-bottom: clamp( 0.9375rem , 0.634469697rem  +  1.5151515152vw , 1.875rem )) {
@@ -836,7 +833,7 @@ body {
 }
 
 .howto__box g:hover circle {
-  r: 20px;
+  right: 20px;
   fill: #036cca;
 }
 
@@ -899,7 +896,6 @@ body {
   background-size: cover;
   background-position: top center;
   min-height: 100vh;
-  padding-bottom: 100px;
 }
 
 .special-offer__inner {
@@ -1058,8 +1054,16 @@ body {
   }
 }
 
-.servises {
-  padding-bottom: 200px;
+@supports (padding-bottom: clamp( 6.25rem , 4.2297979798rem  +  10.101010101vw , 12.5rem )) {
+  .servises {
+    padding-bottom: clamp( 6.25rem , 4.2297979798rem  +  10.101010101vw , 12.5rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 6.25rem , 4.2297979798rem  +  10.101010101vw , 12.5rem )) {
+  .servises {
+    padding-bottom: calc(6.25rem + 6.25 * (100vw - 20rem) / 61.875);
+  }
 }
 
 .servises__box-list {
@@ -1137,6 +1141,8 @@ body {
 .slider__inner {
   border: 1px solid #ffffff;
   margin-bottom: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 @supports (padding-top: clamp( 2.5rem , 1.2878787879rem  +  6.0606060606vw , 6.25rem )) {
@@ -1379,17 +1385,17 @@ footer {
   }
 }
 
-@supports (margin-bottom: clamp( 0.625rem , 0.422979798rem  +  1.0101010101vw , 1.25rem )) {
+@supports (margin-bottom: clamp( 0.9375rem , 0.836489899rem  +  0.5050505051vw , 1.25rem )) {
   .footer__menu-item,
   .footer__links-item {
-    margin-bottom: clamp( 0.625rem , 0.422979798rem  +  1.0101010101vw , 1.25rem );
+    margin-bottom: clamp( 0.9375rem , 0.836489899rem  +  0.5050505051vw , 1.25rem );
   }
 }
 
-@supports not (margin-bottom: clamp( 0.625rem , 0.422979798rem  +  1.0101010101vw , 1.25rem )) {
+@supports not (margin-bottom: clamp( 0.9375rem , 0.836489899rem  +  0.5050505051vw , 1.25rem )) {
   .footer__menu-item,
   .footer__links-item {
-    margin-bottom: calc(0.625rem + 0.625 * (100vw - 20rem) / 61.875);
+    margin-bottom: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 61.875);
   }
 }
 
@@ -1442,6 +1448,18 @@ footer {
 }
 
 @media (min-width: 29.99875em) {
+@supports (margin-left: clamp( 1.5625rem , 1.158459596rem  +  2.0202020202vw , 2.8125rem )) {
+    .header__description-text + .header__description-text {
+      margin-left: clamp( 1.5625rem , 1.158459596rem  +  2.0202020202vw , 2.8125rem );
+    }
+}
+
+@supports not (margin-left: clamp( 1.5625rem , 1.158459596rem  +  2.0202020202vw , 2.8125rem )) {
+    .header__description-text + .header__description-text {
+      margin-left: calc(1.5625rem + 1.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
   .footr-inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1818,6 +1836,10 @@ footer {
     height: 300px;
   }
 
+  .servises__btn-first {
+    margin-bottom: 35px;
+  }
+
   .contacts__inner {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1852,6 +1874,23 @@ footer {
 }
 
 @media (max-width: 29.99875em) {
+  .header__description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header__description-text {
+    margin-bottom: 25px;
+  }
+
   .servises__btn-first::before {
     display: none;
   }
